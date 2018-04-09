@@ -29,6 +29,19 @@ var calculateCentroid = function(points){
 
     // return centroid with the following format
     // return {x:10, y:30};  
+
+    var avgX=0;
+    var avgY=0;
+    points.forEach(function(index){
+
+        avgY+=index.y;
+        avgX+=index.x;
+    })
+
+avgY=avgY/points.length;
+avgX=avgX/points.length;
+
+    return {x:avgX,y:avgY};
 };
 
 
